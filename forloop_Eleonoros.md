@@ -125,6 +125,25 @@ for (let i = 1; i <= 5; i++) {
 *********
 
 ```
+!!Solution!!
+function createPyramid(number) {
+  for(let i = 1; i <= number; i++) {
+    let row = '';
+    
+    for (let j = 1; j <= number - i; j++) {
+      row += ' ';
+    }
+  
+    for (let k = 1; k <= 2 * i - 1; k++) {
+         row += '*'
+    }
+    console.log(row)
+  }
+}
+ 
+const pyramidHeight = 5;
+ 
+createPyramid(pyramidHeight)
 
 14. Using a for loop, print a pattern of numbers:
 
