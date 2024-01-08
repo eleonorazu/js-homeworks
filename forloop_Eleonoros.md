@@ -57,6 +57,10 @@ function divisibleBy3and5() {
 *
 ```
 
+  for(var i=5; i>=1; i--){
+       console.log("* ".repeat(i));
+    }
+
 6. Using a for loop, print a pattern of numbers in a pyramid shape:
 
 ```
