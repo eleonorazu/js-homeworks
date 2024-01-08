@@ -1,0 +1,37 @@
+// Raskite vidutinį krepšininkų ūgį? ATS.: 202.2
+
+let ugiai = [211, 195, 199, 215, 191];
+let sum = 0;
+ 
+for (let i=0; i<ugiai.length;i++){
+  sum+=ugiai[i];
+}
+ 
+let vidutinisUgis = sum/ugiai.length
+console.log(vidutinisUgis)
+
+ 
+ // Raskite kiek krepšininkų yra didesnių už vidutinį krepšininkų ūgį? ATS.: 2
+let count=0;
+for (let i=0; i<ugiai.length;i++){
+  if (ugiai[i]>=vidutinisUgis){
+  count++;
+  }  
+}
+ 
+console.log(count)
+
+// Raskite aukščiausio krepšininko dvitaškių skaičių? ATS.: 14
+let ugiai = [211, 195, 199, 215, 191];
+const max = Math.max(...ugiai);
+const index = ugiai.indexOf(max);
+let dvitaskiai = [15, 20, 98, 14, 48];
+console.log('aukščiausio krepšininko dvitaškių skaičius = '+dvitaskiai[index])
+
+// Raskite žemiausio krepšininko tritaškių skaičių ir marškinėlių nr.? ATS.: 2 ir 69
+let krepsininkai = [23, 9, 11, 57, 69];
+let ugiai = [211, 195, 199, 215, 191];
+let tritaskiai = [2, 5, 6, 1, 2];
+const min = Math.min(...ugiai);
+const index = ugiai.indexOf(min);
+console.log('žemiausio krepšininko tritaškių skaičius = '+ tritaskiai[index]+' '+'ir marškinėlių nr = '+krepsininkai[index])
