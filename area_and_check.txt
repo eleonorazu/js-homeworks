@@ -1,0 +1,46 @@
+//rectangleArea
+
+function getRectangleArea(w,h){
+  let area=w*h;
+  return area;
+ 
+}
+let w=[4,6,8];
+let h=[6,8,10];
+for (let i=0;i<w.length;i++){
+  area=w[i]*h[i];
+  console.log(area)
+}
+
+//check if it is rectangle:
+
+function isRectangle(w, h) {
+  if (w !== h && w !== 0 && h !== 0) {
+    return 'This is a rectangle';
+  } else if (w === h && w !== 0 && h !== 0) {
+    return 'This is a square';
+  } else {
+    return 'Incorrect input';
+  }
+}
+
+let w = [0, 6, 8];
+let h = [4, 8, 8];
+
+for (let i = 0; i < w.length; i++) {
+  console.log(isRectangle(w[i], h[i]));
+}
+
+
+//print 
+function printInfo(w, h, area) {
+  console.log(`Rectangle, which sides are a = ${w} and b = ${h}, ${typeof area === 'number' ? 'has area = ' + area : 'does not exist'}`);
+}
+
+let w = [0, 6, 8];
+let h = [4, 4, 8];
+let area = [null, 24, 64];
+
+for (let i = 0; i < w.length; i++) {
+  printInfo(w[i], h[i], area[i]);
+}
