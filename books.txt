@@ -1,0 +1,74 @@
+
+// Sukurti funkcijas:
+
+
+let books = [
+    {
+        pavadinimas: "Smarkuolė Gilė Hopkins",
+        puslapiai: 60
+    },
+    {
+        pavadinimas: "Alisa Stebuklų šalyje",
+        puslapiai: 192
+    },
+    {
+        pavadinimas: "Jurgelis miškauja",
+        puslapiai: 112
+    },
+    {
+        pavadinimas: "Paslaptingas drakonas",
+        puslapiai: 102
+    },
+    {
+        pavadinimas: "Penktoji šlepetė plius",
+        puslapiai: 200
+    }
+]
+
+// 1. printBook(book) - atspausdina vienos knygos duomenis;
+
+function printBook(books) { 
+console.log("Knygos duomenis : pavadinimas - " + books.pavadinimas + ",  puslapiai - " + books.puslapiai +".");
+}
+printBook(books[0]);
+
+// 2. printAllBooks(arr) - atspausdina visas knygas;
+function printAllBooks(books) { 
+books.forEach(knyga => printBook(knyga));
+}
+printAllBooks(books);
+
+// 3. getBooksCount(arr) - grąžina perskaitytų knygų skaičių;
+function getBooksCount(books){
+  console.log(books.length);
+}
+getBooksCount(books);
+
+// 4. getTotalNumberOfPages(arr) - grąžina perskaitytų knygų puslapių skaičių;
+let sum=0;
+function getTotalNumberOfPages(books){
+  for (let i=0; i<books.length;i++){
+    sum+=books[i].puslapiai;
+  }
+  return sum;
+}
+console.log(getTotalNumberOfPages(books));
+
+// 5. getMaxPages(arr) - grąžina knygą, kuri turi daugiausiai puslapių;
+max=0;
+function getMaxPages(books){
+  for(let i=0; i<books.length; i++){
+    if (books[i].puslapiai > max)
+    max = books[i].puslapiai;
+   
+  }
+   console.log(max);
+}
+getMaxPages(books);
+
+// 6. getAvgNumberOfPages(arr) - grąžina perskaitytų knygų puslapių vidurkį.
+
+function getAvgNumberOfPages(books) {
+  return getTotalNumberOfPages(books) / books.length;
+}
+console.log(getAvgNumberOfPages(books));
